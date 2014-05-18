@@ -4,7 +4,8 @@ $light-cs-color: rgb(245,207,173);
 $dark-cs-color: rgb(235,90,57);
 
 $navbar-default-bg: $light-cs-color;
-$navbar-default-color: $dark-cs-color;
+// $navbar-default-bg does not work https://github.com/RailsApps/rails-composer/issues/146
+$navbar-default-link-color: $dark-cs-color;
 
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
@@ -14,7 +15,17 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 .cs-below-nav {
   @extend .row;
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
   li {
     @extend .col-sm-4;
+    @extend .text-center;
+    margin-bottom: 0.33em;
+    // border: 1px $navbar-default-link-color dashed;
+    a {
+      color: $navbar-default-link-color;
+    }
   }
 }
