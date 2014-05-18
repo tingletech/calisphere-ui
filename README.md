@@ -50,6 +50,8 @@ To preview on github pages:
 
 ```
 grunt build
+git add -A dist/
+git commit dist -m "deploy message"
 git subtree push --prefix dist origin gh-pages
 ```
 
