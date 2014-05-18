@@ -44,7 +44,6 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 .cs-main-row {
   @extend .row;
-  display:flex; // http://stackoverflow.com/questions/22324542/bootstrap-3-columns-in-one-row-same-height
 }
 
 .cs-results-filters {
@@ -54,6 +53,9 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 .cs-results-primary {
   @extend .col-sm-6;
+  .cs-itm {
+    @extend .col-sm-6;
+  }
 }
 
 .cs-results-secondary {
@@ -61,6 +63,6 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 }
 
 .cs-itm {
+  @extend .img-responsive;
   @extend .thumbnail;
-  width: 200px;
 }
