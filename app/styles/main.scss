@@ -1,4 +1,4 @@
-// cs is namespace for calisphere
+// `cs-` is namespace for calisphere
 
 $light-cs-color: rgb(245,207,173);
 $dark-cs-color: rgb(235,90,57);
@@ -13,6 +13,10 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
 // endbower
 
+.cs-logo {
+  margin-top: -15px;
+}
+
 .cs-below-nav {
   @extend .row;
   ul {
@@ -22,10 +26,41 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
   li {
     @extend .col-sm-4;
     @extend .text-center;
+    margin-top: 0.33em;
     margin-bottom: 0.33em;
-    // border: 1px $navbar-default-link-color dashed;
+    a:hover {
+      color: $navbar-default-link-hover-color;
+      text-decoration: none;
+    }
     a {
       color: $navbar-default-link-color;
     }
   }
+}
+
+.cs-body {
+  @extend .container-fluid;
+}
+
+.cs-main-row {
+  @extend .row;
+  display:flex; // http://stackoverflow.com/questions/22324542/bootstrap-3-columns-in-one-row-same-height
+}
+
+.cs-results-filters {
+  @extend .col-sm-3;
+  border: 1px black solid;
+}
+
+.cs-results-primary {
+  @extend .col-sm-6;
+}
+
+.cs-results-secondary {
+  @extend .col-sm-3;
+}
+
+.cs-itm {
+  @extend .thumbnail;
+  width: 200px;
 }
