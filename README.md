@@ -44,4 +44,12 @@ grunt server
 ```
 and then started [editing](https://github.com/tingletech/calisphere-ui/commit/6fd0dd90890badcce2f8a097434106c3e654bd0d)
 
+## deploy
+
+To preview on github pages:
+
+```
+grunt build
+git subtree push --prefix dist origin gh-pages
+```
 
